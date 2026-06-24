@@ -148,7 +148,7 @@ const Hero = () => {
               View Projects
             </button>
             <a
-              href="/Resume_Poornachandran.pdf"
+              href="/Poornachandran_Resume.pdf"
               download="Poornachandran_Resume.pdf"
               className="btn-secondary px-7 py-3"
             >
