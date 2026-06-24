@@ -8,7 +8,6 @@ import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
 import Experience from './components/sections/Experience';
 import Education from './components/sections/Education';
-import Certifications from './components/sections/Certifications';
 import Contact from './components/sections/Contact';
 import ScrollProgress from './components/ui/ScrollProgress';
 import BackToTop from './components/ui/BackToTop';
@@ -42,7 +41,6 @@ function App() {
             <Experience />
             <SectionDivider />
             <Education />
-            <Certifications />
             <Contact />
           </main>
 
