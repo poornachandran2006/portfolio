@@ -30,32 +30,31 @@ export const skills = {
   heading: "Technical Expertise",
   categories: {
     Frontend: [
-      { name: "React.js", level: 90, proficiency: "Advanced" },
-      { name: "Next.js", level: 85, proficiency: "Advanced" },
-      { name: "TypeScript", level: 80, proficiency: "Advanced" },
-      { name: "Tailwind CSS", level: 90, proficiency: "Advanced" }
+      { name: "React.js" },
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" }
     ],
     Backend: [
-      { name: "Node.js", level: 85, proficiency: "Advanced" },
-      { name: "Express.js", level: 85, proficiency: "Advanced" },
-      { name: "FastAPI", level: 75, proficiency: "Intermediate" }
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "FastAPI" }
     ],
     "AI / ML": [
-      { name: "RAG Systems", level: 88, proficiency: "Advanced" },
-      { name: "Vector Search", level: 85, proficiency: "Advanced" },
-      { name: "Prompt Engineering", level: 82, proficiency: "Advanced" },
-      { name: "LLM Integration — Groq & Gemini", level: 80, proficiency: "Advanced" },
-      { name: "Embeddings", level: 78, proficiency: "Intermediate" }
+      { name: "RAG Systems" },
+      { name: "Vector Search" },
+      { name: "LLM Integration — Groq & Gemini" },
+      { name: "Embeddings" }
     ],
     Databases: [
-      { name: "MongoDB", level: 80, proficiency: "Advanced" },
-      { name: "Qdrant Vector DB", level: 82, proficiency: "Advanced" }
+      { name: "MongoDB" },
+      { name: "Qdrant Vector DB" }
     ],
     Tools: [
-      { name: "Docker", level: 72, proficiency: "Intermediate" },
-      { name: "Git & GitHub", level: 88, proficiency: "Advanced" },
-      { name: "Postman", level: 85, proficiency: "Advanced" },
-      { name: "REST APIs", level: 85, proficiency: "Advanced" }
+      { name: "Docker" },
+      { name: "Git & GitHub" },
+      { name: "Postman" },
+      { name: "REST APIs" }
     ]
   },
   systemDesign: [
@@ -194,9 +193,9 @@ export const contact = {
   label: "Contact",
   heading: "Let's Build Something Together.",
   subtext: "I'm open to full-time roles, internships, freelance projects, and research collaborations in AI and full stack engineering.",
-  email: "your.email@example.com",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  email: "poorna2006poorna@gmail.com",
+  github: "https://github.com/poornachandran2006",
+  linkedin: "https://www.linkedin.com/in/poornachandran2006",
   location: "India",
   availability: ["Full-time", "Internship", "Freelance", "Collaboration"]
 };
@@ -212,7 +211,7 @@ export const navigation = {
   ],
   cta: {
     label: "Hire Me",
-    mailto: "your.email@example.com"
+    mailto: "poorna2006poorna@gmail.com"
   }
 };
 
@@ -225,9 +224,9 @@ export const footer = {
     { label: "Contact", href: "#contact" }
   ],
   social: [
-    { icon: "Github", url: "https://github.com/yourusername" },
-    { icon: "Linkedin", url: "https://linkedin.com/in/yourusername" },
-    { icon: "Mail", url: "mailto:your.email@example.com" }
+    { icon: "Github", url: "https://github.com/poornachandran2006" },
+    { icon: "Linkedin", url: "https://www.linkedin.com/in/poornachandran2006" },
+    { icon: "Mail", url: "mailto:poorna2006poorna@gmail.com" }
   ],
   copyright: "© 2025 Poornachandran. Built with React & Tailwind CSS."
 };

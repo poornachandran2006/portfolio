@@ -4,7 +4,6 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -12,18 +11,37 @@ export default {
         display: ['Space Grotesk', 'system-ui', 'sans-serif'],
       },
       colors: {
-        'bg-primary': '#FFFFFF',
-        'bg-secondary': '#F8F8F6',
-        'bg-card': '#FAFAF8',
-        'text-primary': '#0D0D0D',
-        'text-secondary': '#4A4A4A',
-        'text-muted': '#8A8A8A',
-        'accent-primary': '#0A0A0A',
-        'accent-hover': '#1A1A1A',
-        'border-light': '#E8E8E4',
-        'border-strong': '#C8C8C2',
-        'tag-bg': '#F0F0ED',
-        'tag-text': '#2A2A2A',
+        charcoal: {
+          DEFAULT: '#0a0a0a',
+          secondary: '#111111',
+          tertiary: '#1a1a1a',
+        },
+        'cyan-accent': {
+          DEFAULT: '#00c8e8',
+          hover: '#33d6ee',
+          subtle: '#00c8e810',
+          border: '#00c8e830',
+        },
+        'slate-text': {
+          primary: '#e8e8e8',
+          secondary: '#8892a4',
+          muted: '#4a5568',
+        },
+        border: {
+          DEFAULT: '#1e1e1e',
+        },
+      },
+      maxWidth: {
+        content: '1100px',
+      },
+      boxShadow: {
+        nav: '0 4px 20px #00000080',
+        card: '0 8px 30px #00000060',
+        'glow-cyan': '0 0 20px #00c8e830',
+      },
+      transitionDuration: {
+        150: '150ms',
+        200: '200ms',
       },
     },
   },

@@ -33,9 +33,9 @@ const BackToTop = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center justify-center z-50"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          className="fixed bottom-8 right-8 w-12 h-12 rounded-md border border-cyan-accent text-cyan-accent bg-charcoal-secondary hover:bg-cyan-accent-subtle hover:shadow-glow-cyan transition-all duration-200 flex items-center justify-center z-50"
+          whileHover={{ y: -4 }}
+          whileTap={{ scale: 0.95 }}
           aria-label="Back to top"
         >
           <ChevronUp size={24} />

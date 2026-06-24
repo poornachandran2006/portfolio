@@ -19,32 +19,30 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="py-24 lg:py-32 bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+    <section id="about" className="py-24 lg:py-32 bg-charcoal">
+      <div className="max-w-content mx-auto px-6">
         <motion.div
           ref={ref}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={staggerContainer}
         >
-          <SectionHeading label={about.label} heading={about.heading} />
+          <SectionHeading sectionNumber="01" label={about.label} heading={about.heading} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Left - Main Content */}
-            <motion.div variants={fadeUp} className="lg:col-span-2 space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            <motion.div variants={fadeUp} className="space-y-6">
               {about.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-base lg:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p key={index} className="text-base lg:text-lg text-slate-text-secondary leading-[1.7]">
                   {paragraph}
                 </p>
               ))}
             </motion.div>
 
-            {/* Right - Approach Card */}
             <motion.div
               variants={fadeUp}
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 lg:p-8 shadow-sm h-fit"
+              className="bg-charcoal-secondary border border-border rounded-lg p-6 lg:p-8 card-hover h-fit"
             >
-              <h3 className="font-display font-semibold text-xl mb-6 text-gray-900 dark:text-white">
+              <h3 className="font-display font-semibold text-lg mb-6 text-slate-text-primary">
                 My Approach
               </h3>
               <div className="space-y-4">
@@ -52,11 +50,11 @@ const About = () => {
                   const Icon = iconMap[item.icon];
                   return (
                     <div key={index} className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center flex-shrink-0">
-                        <Icon size={20} className="text-gray-900 dark:text-white" />
+                      <div className="w-10 h-10 rounded-md bg-charcoal-tertiary flex items-center justify-center flex-shrink-0">
+                        <Icon size={20} className="text-cyan-accent" />
                       </div>
                       <div className="pt-2">
-                        <p className="text-sm font-medium text-gray-900 dark:text-white">{item.label}</p>
+                        <p className="text-sm font-medium text-slate-text-primary">{item.label}</p>
                       </div>
                     </div>
                   );

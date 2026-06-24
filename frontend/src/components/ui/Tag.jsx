@@ -1,11 +1,12 @@
-const Tag = ({ children, variant = "default" }) => {
+const Tag = ({ children, variant = "default", className = "" }) => {
   const variants = {
-    default: "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700",
-    dark: "bg-gray-900 dark:bg-white text-white dark:text-gray-900",
+    default: "skill-tag",
+    tech: "tech-tag",
+    accent: "inline-block border border-cyan-accent-border bg-cyan-accent-subtle text-cyan-accent rounded px-3 py-1 text-xs font-medium",
   };
 
   return (
-    <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${variants[variant]}`}>
+    <span className={`${variants[variant] || variants.default} ${className}`}>
       {children}
     </span>
   );

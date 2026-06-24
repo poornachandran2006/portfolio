@@ -1,22 +1,29 @@
 import { motion } from 'framer-motion';
 import { fadeUp } from './AnimatedSection';
 
-const SectionHeading = ({ label, heading, className = "" }) => {
+const SectionHeading = ({ sectionNumber, label, heading, className = "" }) => {
+  const formattedLabel = sectionNumber
+    ? `${sectionNumber}. ${label}`.toUpperCase()
+    : label.toUpperCase();
+
   return (
     <div className={`mb-12 lg:mb-16 ${className}`}>
-      <motion.p 
+      <motion.p
         variants={fadeUp}
-        className="text-xs uppercase tracking-[0.1em] text-gray-500 dark:text-gray-400 font-medium mb-3"
+        className="section-label"
       >
-        {label}
+        {formattedLabel}
       </motion.p>
-      <motion.h2 
+      <motion.h2
         variants={fadeUp}
-        className="text-4xl lg:text-5xl font-display font-bold text-gray-900 dark:text-white tracking-tight"
-        style={{ letterSpacing: '-0.03em' }}
+        className="text-3xl lg:text-4xl font-display font-semibold text-slate-text-primary tracking-tight"
       >
         {heading}
       </motion.h2>
+      <motion.div
+        variants={fadeUp}
+        className="mt-2 h-px w-[200px] bg-gradient-to-r from-cyan-accent to-transparent"
+      />
     </div>
   );
 };

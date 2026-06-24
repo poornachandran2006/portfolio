@@ -1,18 +1,16 @@
-import { useEffect, useState } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { useScroll, useSpring, motion } from 'framer-motion';
 
 const ScrollProgress = () => {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-0.5 bg-gray-900 dark:bg-white origin-left z-[60]"
-      style={{ scaleX }}
+      className="fixed top-0 left-0 right-0 z-[9999] h-[2px] origin-left"
+      style={{
+        scaleX,
+        background: 'linear-gradient(90deg, #00c8e8, #33d6ee)',
+      }}
     />
   );
 };
