@@ -1,7 +1,8 @@
 import express from 'express';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 const router = express.Router();
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 router.post('/', async (req, res) => {
   const { name, email, message } = req.body;
@@ -15,19 +16,9 @@ router.post('/', async (req, res) => {
     return res.status(400).json({ error: 'Invalid email address.' });
   }
 
-  const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
-
   try {
-    await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+    await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>',
       to: process.env.EMAIL_USER,
       replyTo: email,
       subject: `New message from ${name}`,
